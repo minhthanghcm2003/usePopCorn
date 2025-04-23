@@ -43,7 +43,7 @@ type MovieDetailsType = {
 };
 
 export default function App() {
-  const [query, setQuery] = useState<string>('Interstellar');
+  const [query, setQuery] = useState<string>('');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const { movies, isLoading, error } = useMovie(query, handleCloseMovie);
   const [watched, setWatched] = useLocalStorageState([], 'watched');
